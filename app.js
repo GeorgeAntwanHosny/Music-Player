@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         song_nameEL.textContent = songD.song_name;
         song_authorEL.textContent = songD.author_name;
         song_imgEL.src = songD.song_image_url;
-        
+        song_imgEL.style.display='none';
         // song_audioEL.setAttribute('src',songD.song_audio_url);
         songD.is_current_selected_song = true;
         changeAudioSource(songD.song_audio_url);
