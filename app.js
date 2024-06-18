@@ -79,6 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
         song_authorEL.textContent = songD.author_name;
         song_imgEL.src = songD.song_image_url;
         song_imgEL.style.display='none';
+        document.getElementById('loader_image').style.display='block'
+        song_imgEL.onload = function() {
+          song_imgEL.style.display='block';
+          console.log('Image has loaded!');
+          document.getElementById('loader_image').style.display='none';
+         };
         // song_audioEL.setAttribute('src',songD.song_audio_url);
         songD.is_current_selected_song = true;
         changeAudioSource(songD.song_audio_url);
