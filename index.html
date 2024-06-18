@@ -6,13 +6,17 @@
     <title>Music Player</title>
     <link rel="stylesheet" href="./app.css" />
     <link rel="stylesheet" href="./audio_player.css" />
+    <link rel="stylesheet" href="./loader.css" />
     <script type="module" src="./audio_player.js"></script>
     <script type="module" src="./app.js"></script>
   </head>
   <body>
     <div class="app_container">
       <div class="player_container">
-        <div><img src="./images/cover-1.png" alt="cover-song" id="song_img"/></div>
+        <div>
+          <div id="loader_image" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          <img src="./images/cover-1.png" alt="cover-song" id="song_img" />
+        </div>
         <p id="song_name">Lost in the City Lights</p>
         <p id="song_author">Cosmo Sheldrake</p>
         <div class="player-controls">

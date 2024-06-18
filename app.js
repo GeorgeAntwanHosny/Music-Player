@@ -48,6 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
   song_authorEL.textContent = songData[0].author_name;
   let song_imgEL = document.getElementById("song_img");
   song_imgEL.setAttribute("src", songData[0].song_image_url);
+  song_imgEL.style.display='none';
+  song_imgEL.onload = function() {
+    song_imgEL.style.display='block';
+    console.log('Image has loaded!');
+    document.getElementById('loader_image').style.display='none';
+   };
   let song_audioEL = document.getElementById("song_audio");
   song_audioEL.setAttribute("src", songData[0].song_audio_url);
   // get the button for next, and previous
@@ -71,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!songD.is_current_selected_song) {
         song_nameEL.textContent = songD.song_name;
         song_authorEL.textContent = songD.author_name;
-        song_imgEL.setAttribute("src", songD.song_image_url);
+        song_imgEL.src = songD.song_image_url;
+        
         // song_audioEL.setAttribute('src',songD.song_audio_url);
         songD.is_current_selected_song = true;
         changeAudioSource(songD.song_audio_url);

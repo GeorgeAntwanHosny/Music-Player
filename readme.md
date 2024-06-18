@@ -19,4 +19,4 @@
 
 - #### The page is responsive on different screen sizes.
 
-- #### Deploy the solution [Demo URL]().
+- #### Deploy the solution [Demo URL](https://music-player-one-inky.vercel.app/).
