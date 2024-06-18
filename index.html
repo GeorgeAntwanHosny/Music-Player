@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./app.css" />
+    <link rel="stylesheet" href="./audio_player.css" />
+    <script type="module" src="./audio_player.js"></script>
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="app_container">
+      <div class="player_container">
+        <div><img src="./images/cover-1.png" alt="cover-song" id="song_img"/></div>
+        <p id="song_name">Lost in the City Lights</p>
+        <p id="song_author">Cosmo Sheldrake</p>
+        <div class="player-controls">
+         
+          <div class="player-timeline">
+            <span class="player-time player-time-current">00:00</span>
+            <div class="player-progress">
+              <div class="player-progress-filled"></div>
+            </div>
+            <span class="player-time player-time-duration">00:00</span>
+           
+          </div>
+          <div class="buttons-container">
+            <img  data-button="next-prev-button" src="./images/Stop_and_play_fill-1.svg">
+           <div>
+            <button
+            class="player-play-btn"
+            role="button"
+            aria-label="Play"
+            data-playing="false"
+             >
+            <div class="player-icon-play">
+              <img src="./images/Play_fill.svg" alt="Play">
+            </div>
+            <div class="player-icon-pause hidden">
+                <img src="./images/pause-svgrepo-com.svg" alt="pause" >
+            </div>
+            </button>
+           </div>
+           <img  data-button="next-prev-button" src="./images/Stop_and_play_fill_reverse.svg" >
+          </div>
+        </div>
+        </div>
+        <audio src="./sound/lost-in-city-lights-145038.mp3" id="song_audio"></audio>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+.hidden {
+  display: none;
+}
+
+.player {
+  max-width: 500px;
+  margin: 7rem auto;
+  background: white;
+  padding: 36px 32px 24px 32px;
+  border-radius: 14px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.player-track-meta {
+  text-align: center;
+}
+
+.player-track-meta p {
+  margin: 0;
+  font-size: 20px;
+  color: #0e0e0e;
+  font-weight: 700;
+}
+
+.player-track-meta span {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 2px;
+  position: relative;
+  top: 1px;
+  color: #a3a3a3;
+}
+.buttons-container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-template-columns: 50px 60px 50px;
+  justify-items: center;
+  align-items: baseline;
+}
+.player-controls {
+  width: 100%;
+  display: grid;
+
+  align-items: center;
+  padding: 0 15px;
+}
+
+.player-play-btn {
+  background: #c93b76;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+[data-button="next-prev-button"]:hover {
+  background-color: #38bdf8;
+  background: #262c35;
+  border-radius: 50%;
+  border: 2px solid #262c35;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.icon-container {
+  fill: transparent;
+  stroke: none;
+}
+
+.player-play-btn:hover {
+  fill: #444444;
+}
+
+.player-play-btn svg {
+  color: #0e0e0e;
+  position: relative;
+  left: 0.5px;
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+.player-play-btn:hover svg {
+  color: #ffffff;
+}
+
+.player-timeline {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px; */
+}
+.player-time-current {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  justify-self: start;
+  color: #4d5562;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 0.75rem;
+}
+.player-time-duration {
+  justify-self: end;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  color: #4d5562;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 0.75rem;
+}
+.player-progress {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  display: flex;
+  position: relative;
+  height: 6px;
+  background: #a3a3a3;
+  border-radius: 25px;
+  margin: 0 5px;
+  flex: 10;
+  flex-basis: 100%;
+  overflow: hidden;
+}
+
+.player-progress-filled {
+  width: 100%;
+  height: 6px;
+  background: #c93b76;
+  flex: 0;
+  flex-basis: 0%;
+  border-radius: 25px;
+}
+
+.player-time {
+  padding: 2px 5px;
+}
+
+.player-volume-container {
+  width: 15%;
+}
+.player-volume {
+  height: 28px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background: transparent;
+}
+
+.player-volume:focus {
+  outline: none;
+}
+
+.player-volume::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animation: 0.2s;
+  background: #0e0e0e;
+  border-radius: 10px;
+}
+
+.player-volume::-webkit-slider-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 100px;
+  border: none;
+  background: #0e0e0e;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+
+.player-volume:focus::-webkit-slider-runnable-track {
+  background: #0e0e0e;
+}
+
+.player-volume::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animation: 0.2s;
+  background: #0e0e0e;
+  border-radius: 10px;
+}
+
+.player-volume::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 100px;
+  border: none;
+  background: #0e0e0e;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+.player-volume::-ms-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animation: 0.2s;
+  background: #0e0e0e;
+  border-radius: 10px;
+}
+
+.player-volume::-ms-fill-lower {
+  background: #0e0e0e;
+  border-radius: 10px;
+}
+
+.player-volume::-ms-fill-upper {
+  background: #0e0e0e;
+  border-radius: 10px;
+}
+
+.player-volume::-ms-thumb {
+  margin-top: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 5px;
+  border: none;
+  background: #0e0e0e;
+  cursor: pointer;
+}
+.player-volume:focus::-ms-fill-lower {
+  background: #38bdf8;
+}
+
+.player-volume:focus::-ms-fill-upper {
+  background: #38bdf8;
+}
